@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuideLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/screenWithNumbers"
+        android:paddingEnd="@dimen/paddingEnd_for_screenWN"
+        style="@style/Calculator_Screen_land"
+        app:layout_constraintStart_toEndOf="@+id/screenWithSigns"
+        app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GuideLine" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/titleTextView"
+        style="@style/Calculator_Title_land"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screenWithNumbers" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSplit"
+        android:text="@string/split"
+        style="@style/Calculator_right_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonMultiply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonMultiply"
+        android:text="@string/multiplication"
+        style="@style/Calculator_right_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonPlus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonSplit" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPlus"
+        android:text="@string/plus"
+        style="@style/Calculator_right_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonMinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonMultiply" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonMinus"
+        android:text="@string/minus"
+        style="@style/Calculator_right_Buttons_land"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonPlus" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNine"
+        android:text="@string/nine"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonSix"
+        app:layout_constraintEnd_toStartOf="@id/buttonSplit"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonEight"
+        android:text="@string/eight"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonFive"
+        app:layout_constraintEnd_toStartOf="@id/buttonNine"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSeven"
+        android:text="@string/seven"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonFour"
+        app:layout_constraintEnd_toStartOf="@id/buttonEight"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSix"
+        android:text="@string/six"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonThree"
+        app:layout_constraintEnd_toStartOf="@id/buttonMultiply"
+        app:layout_constraintTop_toBottomOf="@id/buttonNine" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonThree"
+        style="@style/Calculator_Buttons_land"
+        android:layout_marginEnd="12dp"
+        android:text="@string/three"
+        app:layout_constraintBottom_toTopOf="@id/buttonEqually"
+        app:layout_constraintEnd_toStartOf="@id/buttonPlus"
+        app:layout_constraintTop_toBottomOf="@id/buttonSix" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonEqually"
+        android:text="@string/equally"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonMinus"
+        app:layout_constraintTop_toBottomOf="@id/buttonThree" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFive"
+        android:text="@string/five"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonTwo"
+        app:layout_constraintEnd_toStartOf="@id/buttonSix"
+        app:layout_constraintTop_toBottomOf="@id/buttonEight" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonTwo"
+        android:text="@string/two"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonZero"
+        app:layout_constraintEnd_toStartOf="@id/buttonThree"
+        app:layout_constraintTop_toBottomOf="@id/buttonFive" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonZero"
+        android:text="@string/zero"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonEqually"
+
+        app:layout_constraintTop_toBottomOf="@id/buttonTwo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonFour"
+        android:text="@string/four"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonOne"
+        app:layout_constraintEnd_toStartOf="@id/buttonFive"
+        app:layout_constraintTop_toBottomOf="@id/buttonSeven" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOne"
+        android:text="@string/one"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonPlusMinus"
+        app:layout_constraintEnd_toStartOf="@id/buttonTwo"
+        app:layout_constraintTop_toBottomOf="@id/buttonFour" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPlusMinus"
+        android:text="@string/plus_minus"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonZero"
+        app:layout_constraintTop_toBottomOf="@id/buttonOne" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonResetOne"
+        android:text="@string/resetOne"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonPlusMinus"
+        app:layout_constraintTop_toBottomOf="@id/buttonC" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonC"
+        android:text="@string/discharge"
+        style="@style/Calculator_Buttons_land"
+        app:layout_constraintBottom_toTopOf="@id/buttonResetOne"
+        app:layout_constraintEnd_toStartOf="@id/buttonFour"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/screenWithSigns"
+        style="@style/Calculator_Screen_land"
+        app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+        app:layout_constraintEnd_toStartOf="@+id/screenWithNumbers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GuideLine"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
